@@ -22,7 +22,7 @@ h1 {
     text-shadow: 0px 2px 5px rgba(0,0,0,0.15);
 }
 
-/* Video container */
+/* Video container card */
 .video-container {
     margin: 20px auto;
     width: 80%;
@@ -31,6 +31,13 @@ h1 {
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+/* Hover effect for container */
+.video-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 /* Make iframes responsive */
@@ -41,37 +48,7 @@ h1 {
     border: none;
 }
 
-/* Back button */
-p a {
-    display: inline-block;
-    margin-top: 25px;
-    text-decoration: none;
-    padding: 12px 25px;
-    background: #ff9933;
-    color: white;
-    border-radius: 25px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-p a:hover {
-    background: #ffb866;
-    transform: scale(1.08);
-}
-
-/* Mobile improvement */
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    .video-container iframe {
-        height: 200px;
-    }
-}
-
-/* Button */
+/* Back Button Style */
 button {
     padding: 12px 25px;
     font-size: 18px;
@@ -81,10 +58,29 @@ button {
     color: black;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 30px;
     font-weight: bold;
 }
 
 button:hover {
     background: #ffd27f;
     transform: scale(1.08);
+}
+
+/* Make button link look clean */
+button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .video-container iframe {
+        height: 200px;
+    }
 }
