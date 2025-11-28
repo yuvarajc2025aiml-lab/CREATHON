@@ -1,6 +1,4 @@
-// ---------------------------
 // Load existing progress
-// ---------------------------
 let daysCompleted = parseInt(localStorage.getItem("daysCompleted")) || 0;
 localStorage.setItem("daysCompleted", daysCompleted);
 
@@ -73,3 +71,4 @@ function onPlayerStateChange(event) {
         }
     }
 }
+
