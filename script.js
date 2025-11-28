@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // If we are on the navigation page, update progress
     if (document.getElementById("progressText")) {
         updateProgressDisplay();
+
+        // Add RESET button event
+        document.getElementById("resetBtn").addEventListener("click", resetProgress);
     }
 });
 
@@ -30,6 +33,18 @@ function updateProgressDisplay() {
     if (daysCompleted >= 30) {
         progressText.textContent = "🎉 Challenge Completed!";
         progressBar.style.background = "green";
+    }
+}
+
+// ---------------------------
+// Reset button function
+// ---------------------------
+function resetProgress() {
+    if (confirm("Are you sure you want to reset your progress?")) {
+        daysCompleted = 0;
+        localStorage.setItem("daysCompleted", 0);
+        updateProgressDisplay();
+        alert("Progress has been reset.");
     }
 }
 
@@ -55,7 +70,7 @@ function onPlayerStateChange(event) {
 
         // Increase day count
         daysCompleted++;
-        if (daysCompleted > 30) daysCompleted = 30;   // Max limit
+        if (daysCompleted > 30) daysCompleted = 30;
 
         // Save it
         localStorage.setItem("daysCompleted", daysCompleted);
@@ -73,3 +88,5 @@ function onPlayerStateChange(event) {
         }
     }
 }
+
+
