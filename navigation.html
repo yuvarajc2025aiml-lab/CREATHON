@@ -7,15 +7,19 @@
     <title>Yoga Sections</title>
 </head>
 <body>
-      <div class="progress-wrapper">
-            <h2>30-Day Yoga Challenge</h2>
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: 40%;"></div>
-            </div>
-            <p>Completed: 12 / 30 days</p>
-     </div>
 
-      </div>
+    <div class="progress-wrapper">
+        <h2>30-Day Yoga Challenge</h2>
+
+        <div class="progress-bar">
+            <div id="progressBar" class="progress-fill"></div>
+        </div>
+
+        <p id="progressText">Completed: 0 / 30 days</p>
+
+        <!-- RESET BUTTON -->
+        <button id="resetBtn">🔄 Reset Progress</button>
+    </div>
 
     <div class="sections">
         <h1>Select Your Yoga Routine</h1>
@@ -25,7 +29,7 @@
         <div><a href="night_yoga.html">Night Yoga</a></div>
     </div>
 
-     
+    <script src="script.js"></script>
 </body>
 </html>
 
