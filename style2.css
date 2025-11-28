@@ -14,10 +14,6 @@ body {
     color: #fff;
 }
 
-
-
-
-
 /* --- PROGRESS BAR SECTION --- */
 .progress-wrapper {
     text-align: center;
@@ -54,6 +50,25 @@ body {
 .progress-wrapper p {
     margin-top: 10px;
     font-size: 18px;
+}
+
+/* --- RESET BUTTON STYLE --- */
+#resetBtn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff5e5e;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#resetBtn:hover {
+    background: #ff8080;
+    transform: scale(1.08);
 }
 
 /* --- SECTIONS --- */
